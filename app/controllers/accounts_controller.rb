@@ -55,6 +55,8 @@ class AccountsController < ApplicationController
   # DELETE /accounts/1.json
   def destroy
     @account.destroy
+    TwitterRelationship.delete_all(follower: @account.twitter_id)
+    TwitterRelationship.delete_all(followed: @account.twitter_id)
     respond_to do |format|
       format.html { redirect_to root_url, notice: 'Account was successfully destroyed.' }
       format.json { head :no_content }
