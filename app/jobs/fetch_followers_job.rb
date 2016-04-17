@@ -53,6 +53,8 @@ class FetchFollowersJob < ActiveJob::Base
             sleep 15 * 60
             next
         end
+        
+        batch = []
 
         i['ids'].each do |id|
 
@@ -61,9 +63,11 @@ class FetchFollowersJob < ActiveJob::Base
             @twitter_relationship.follower = id
             @twitter_relationship.followed = twitter_id
 
-            @twitter_relationship.save
+            batch << @twitter_relationship
 
         end
+        
+        TwitterRelationship.import batch
 
         cursor = i['next_cursor']
 
