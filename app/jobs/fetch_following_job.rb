@@ -46,7 +46,7 @@ class FetchFollowingJob < ActiveJob::Base
         i = JSON.parse(response.body)
 
         if i['errors'] != nil
-            write_to_api_call_log("A rate limit was hit when processing for twitter id: " + twitter_id, false, '/friends/list', twitter_id, 0)
+            write_to_api_call_log("A rate limit was hit when processing for twitter id: " + twitter_id, false, '/friends/ids', twitter_id, 0)
             sleep 16 * 60
             next
         end
