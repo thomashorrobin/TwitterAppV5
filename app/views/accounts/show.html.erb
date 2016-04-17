@@ -27,7 +27,7 @@
 
 <p>
   <strong>Party:</strong>
-  <%= @account.party.party_name %>
+  <%= @account.party ? @account.party.party_name : 'unassigned' %>
 </p>
 
 <%= link_to 'Edit', edit_account_path(@account) %> |
