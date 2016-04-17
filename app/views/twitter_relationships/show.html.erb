@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Follower:</strong>
+  <%= @twitter_relationship.follower %>
+</p>
+
+<p>
+  <strong>Followed:</strong>
+  <%= @twitter_relationship.followed %>
+</p>
+
+<%= link_to 'Edit', edit_twitter_relationship_path(@twitter_relationship) %> |
+<%= link_to 'Back', twitter_relationships_path %>

@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Api Call Logs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Call description</th>
+      <th>Call date time</th>
+      <th>Successful</th>
+      <th>End point path</th>
+      <th>Twitter handle</th>
+      <th>Records inserted</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @api_call_logs.each do |api_call_log| %>
+      <tr class="<%= api_call_log.successful ? 'success-log' : 'failed-log' %>">
+        <td><%= api_call_log.call_description %></td>
+        <td><%= api_call_log.call_date_time.in_time_zone("Auckland").strftime("%I:%M %p") %></td>
+        <td><%= api_call_log.successful %></td>
+        <td><%= api_call_log.end_point_path %></td>
+        <td><%= api_call_log.twitter_handle %></td>
+        <td><%= api_call_log.records_inserted %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

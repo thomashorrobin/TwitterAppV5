@@ -1,0 +1,25 @@
+<%= form_for(@twitter_relationship) do |f| %>
+  <% if @twitter_relationship.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@twitter_relationship.errors.count, "error") %> prohibited this twitter_relationship from being saved:</h2>
+
+      <ul>
+      <% @twitter_relationship.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :follower %><br>
+    <%= f.text_field :follower %>
+  </div>
+  <div class="field">
+    <%= f.label :followed %><br>
+    <%= f.text_field :followed %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

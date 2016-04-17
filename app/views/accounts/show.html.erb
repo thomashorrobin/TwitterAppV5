@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @account.username %>
+</p>
+
+<p>
+  <strong>Twitter:</strong>
+  <%= @account.twitter_id %>
+</p>
+
+<p>
+  <strong>Display name:</strong>
+  <%= @account.display_name %>
+</p>
+
+<p>
+  <strong>Followers count:</strong>
+  <%= @account.followers_count %>
+</p>
+
+<p>
+  <strong>Following count:</strong>
+  <%= @account.following_count %>
+</p>
+
+<p>
+  <strong>Party:</strong>
+  <%= @account.party.party_name %>
+</p>
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', root_path %>

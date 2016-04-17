@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Twitter Relationships</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Follower</th>
+      <th>Followed</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @twitter_relationships.each do |twitter_relationship| %>
+      <tr>
+        <td><%= twitter_relationship.follower %></td>
+        <td><%= twitter_relationship.followed %></td>
+        <td><%= link_to 'Show', twitter_relationship %></td>
+        <td><%= link_to 'Edit', edit_twitter_relationship_path(twitter_relationship) %></td>
+        <td><%= link_to 'Destroy', twitter_relationship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Twitter relationship', new_twitter_relationship_path %>

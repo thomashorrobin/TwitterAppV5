@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  call_description: MyString
+  call_date_time: MyString
+  successful: false
+  end_point_path: MyString
+  twitter_handle: MyString
+  records_inserted: 1
+
+two:
+  call_description: MyString
+  call_date_time: MyString
+  successful: false
+  end_point_path: MyString
+  twitter_handle: MyString
+  records_inserted: 1

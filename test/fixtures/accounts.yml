@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: MyString
+  twitter_id: MyString
+  display_name: MyString
+  followers_count: 1
+  following_count: 1
+  party_id: 
+
+two:
+  username: MyString
+  twitter_id: MyString
+  display_name: MyString
+  followers_count: 1
+  following_count: 1
+  party_id: 
