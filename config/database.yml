@@ -48,7 +48,14 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: TwitterAppV5_production
-  username: TwitterAppV5
-  password: <%= ENV['TWITTERAPPV5_DATABASE_PASSWORD'] %>
+
+  database: twitter_app_v5_production
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: 5
+  host: localhost
+  username: rails
+  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
+
