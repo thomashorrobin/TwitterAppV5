@@ -20,7 +20,7 @@ gem 'json'
 
 gem 'activerecord-import'
 
-gem 'backburner'
+gem 'sidekiq'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
